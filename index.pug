@@ -1,8 +1,34 @@
 doctype html 
 html 
   head 
-    title My First Pug page!
   body 
-    h1 My First Pug Page!
-    main 
-      h2 This is the main part of my page
+    h1 welcome! 
+    p. 
+      This is a paragraph 
+      and this is a new line
+    ul 
+      li this is item #1
+      li this is item #2
+      li this is item #3
+    h5#pageTitle adding an id
+    p.pagePara 
+      added a class 
+      another line
+    .display-box this will create a div with a class
+    .display-box. 
+      this will create a div with a class
+      and multilined
+// declaring javascript vars
+- let firstName = "Juan"
+- let lastName = "Camacho"
+- let fullName = `${firstName} ${lastName}`
+
+p #{firstName}
+p.first-name #{firstName}
+#first-name #{firstName}
+// the equals sign must not contain a space
+p= firstName  
+#first-name= firstName
+.full-name= firstName + " " + lastName
+.full-name= `first name: ${firstName}, last name: ${lastName}`
+p#full-name= fullName
