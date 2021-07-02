@@ -12,10 +12,6 @@
 #### full terminal command
 ```pug -w ./ -o ./html -P```
 
-#### to make new lines add a period at the end of the tag
-``` 
-p. 
-    This is a paragraph 
-    and this is a new line 
-      
-```
+
+#### watch specific file 
+```pug -w extra.pug -o ./html -P```
