@@ -1,0 +1,41 @@
+- 
+  const friendList = [
+    {
+      'firstName' : 'Juan',
+      'lastName' : 'Camacho',
+      'number' : '123456'
+    },
+    {
+      'firstName' : 'Stephany',
+      'lastName' : 'Camacho',
+      'number' : '456789'
+    },
+    {
+      'firstName' : 'Cris',
+      'lastName' : 'Camacho',
+      'number' : '789123'
+    },
+  ]
+
+- const lonelyPerson = []
+
+#friends-list  
+  each friend in friendList 
+    .friend  
+      .first-name= friend.firstName 
+      .last-name= friend.lastName
+      .number= friend.number
+
+#friends-list2
+  each friend in friendList 
+    .friend
+      .lastname #{friend.firstName} 
+      .firstname #{friend.lastName} 
+      .number #{friend.number}
+      
+#friend-list3
+  each friend in lonelyPerson
+    .friend 
+      .lastname #{friend.firstName} 
+  else 
+    .oh-no you have no friends

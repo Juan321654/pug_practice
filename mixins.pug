@@ -1,0 +1,36 @@
+mixin friendCard(friend)
+  .friend 
+    .first-name #{friend.firstName} 
+    .last-name #{friend.lastName} 
+    .number #{friend.number}
+
+mixin pet(name) 
+  li.pet #{name}
+
+- 
+  const friendList = [
+    {
+      'firstName' : 'Juan',
+      'lastName' : 'Camacho',
+      'number' : '123456'
+    },
+    {
+      'firstName' : 'Stephany',
+      'lastName' : 'Camacho',
+      'number' : '456789'
+    },
+    {
+      'firstName' : 'Cris',
+      'lastName' : 'Camacho',
+      'number' : '789123'
+    },
+  ]
+
+#friends 
+  each friend in friendList 
+    +friendCard(friend)
+
+ul 
+  +pet('cat')
+  +pet('dog')
+  +pet('kiwi')

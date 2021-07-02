@@ -15,3 +15,5 @@
 
 #### watch specific file 
 ```pug -w extra.pug -o ./html -P```
+
+https://pugjs.org/api/getting-started.html
